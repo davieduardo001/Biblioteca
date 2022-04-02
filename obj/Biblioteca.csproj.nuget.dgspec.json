@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/media/davi/Novo volume/senac/ucGitEDebug/atividade1/Biblioteca/Biblioteca.csproj": {}
+    "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Biblioteca.csproj": {}
   },
   "projects": {
-    "/media/davi/Novo volume/senac/ucGitEDebug/atividade1/Biblioteca/Biblioteca.csproj": {
+    "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Biblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/davi/Novo volume/senac/ucGitEDebug/atividade1/Biblioteca/Biblioteca.csproj",
+        "projectUniqueName": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Biblioteca.csproj",
         "projectName": "Biblioteca",
-        "projectPath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade1/Biblioteca/Biblioteca.csproj",
+        "projectPath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Biblioteca.csproj",
         "packagesPath": "/home/davi/.nuget/packages/",
-        "outputPath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade1/Biblioteca/obj/",
+        "outputPath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/davi/.nuget/NuGet/NuGet.Config"
