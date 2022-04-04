@@ -14407,6 +14407,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Views/Usuario/Cadastro.cshtml",
+      "TargetPath": "Views\\Usuario\\Cadastro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -14422,6 +14427,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Views/Usuario/_FormCadastro.cshtml",
+      "TargetPath": "Views\\Usuario\\_FormCadastro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Views/Usuario/Exclusao.cshtml",
+      "TargetPath": "Views\\Usuario\\Exclusao.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Views/Livro/Cadastro.cshtml",
       "TargetPath": "Views\\Livro\\Cadastro.cshtml",
       "FileKind": "mvc"
@@ -14429,6 +14444,16 @@
     {
       "FilePath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Views/Usuario/Listagem.cshtml",
+      "TargetPath": "Views\\Usuario\\Listagem.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Views/Usuario/Edicao.cshtml",
+      "TargetPath": "Views\\Usuario\\Edicao.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -155,3 +155,8 @@
 /media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/Debug/netcoreapp3.1/Biblioteca.dll
 /media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/Debug/netcoreapp3.1/Biblioteca.pdb
 /media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/Debug/netcoreapp3.1/Biblioteca.genruntimeconfig.cache
+/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/Debug/netcoreapp3.1/Razor/Views/Usuario/Cadastro.cshtml.g.cs
+/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/Debug/netcoreapp3.1/Razor/Views/Usuario/Edicao.cshtml.g.cs
+/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/Debug/netcoreapp3.1/Razor/Views/Usuario/Exclusao.cshtml.g.cs
+/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/Debug/netcoreapp3.1/Razor/Views/Usuario/Listagem.cshtml.g.cs
+/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/Debug/netcoreapp3.1/Razor/Views/Usuario/_FormCadastro.cshtml.g.cs
