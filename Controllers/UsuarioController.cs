@@ -1,5 +1,6 @@
 using Biblioteca.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace Biblioteca.Controllers
 {
@@ -26,5 +27,12 @@ namespace Biblioteca.Controllers
             return RedirectToAction("Listagem");
         }
 
+        
+        public IActionResult Listagem()
+        {
+            UsuarioService us = new UsuarioService();
+            List<Usuario> u = us.Listar();
+            return View(u);
+        }
     }
 }
