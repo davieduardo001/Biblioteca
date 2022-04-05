@@ -14482,6 +14482,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Views/Usuario/PrivilegiosDeAdm.cshtml",
+      "TargetPath": "Views\\Usuario\\PrivilegiosDeAdm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/Views/Livro/_FormCadastro.cshtml",
       "TargetPath": "Views\\Livro\\_FormCadastro.cshtml",
       "FileKind": "mvc"

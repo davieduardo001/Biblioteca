@@ -160,3 +160,4 @@
 /media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/Debug/netcoreapp3.1/Razor/Views/Usuario/Exclusao.cshtml.g.cs
 /media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/Debug/netcoreapp3.1/Razor/Views/Usuario/Listagem.cshtml.g.cs
 /media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/Debug/netcoreapp3.1/Razor/Views/Usuario/_FormCadastro.cshtml.g.cs
+/media/davi/Novo volume/senac/ucGitEDebug/atividade2/Biblioteca/obj/Debug/netcoreapp3.1/Razor/Views/Usuario/PrivilegiosDeAdm.cshtml.g.cs

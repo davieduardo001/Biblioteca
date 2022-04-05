@@ -38,9 +38,28 @@ namespace Biblioteca.Controllers
        //Listar Usuarios 
         public IActionResult Listagem()
         {
+            /*
+            string Login = HttpContext.Session.GetString("Login");
+
+            if (Login == "admin")
+            {
+                UsuarioService us = new UsuarioService();
+                List<Usuario> u = us.Listar();
+                return View(u);
+            } else {
+                return RedirectToAction("PrivilegiosDeAdm");
+            }
+            */
+
             UsuarioService us = new UsuarioService();
             List<Usuario> u = us.Listar();
             return View(u);
+            
+        }
+
+        public IActionResult PrivilegiosDeAdm()
+        {
+            return View();
         }
 
         //Editar Usuarios

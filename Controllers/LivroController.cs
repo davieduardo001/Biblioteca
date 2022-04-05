@@ -29,7 +29,7 @@ namespace Biblioteca.Controllers
         }
 
         public IActionResult Listagem(string tipoFiltro, string filtro, string itensPorPagina, int numDaPagina, int paginaAtual)
-        {
+        {   
             Autenticacao.CheckLogin(this);
  
             FiltrosLivros objFiltro = null;
