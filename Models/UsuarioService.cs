@@ -122,5 +122,8 @@ namespace Biblioteca.Models
            command.ExecuteNonQuery();
            connection.Close();
        }
+
+       //Autenticacao para login
+       
     }
 }

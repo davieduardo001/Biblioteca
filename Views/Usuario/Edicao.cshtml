@@ -1,6 +1,25 @@
 @model Usuario
+
 @{
     ViewData["Title"] = "Edicao de Usuarios";
 }
 <h1 class="row justify-content-md-center">Edição de Usuarios</h1>
-<partial name="_FormCadastro" for="@Model" />
+
+<div class="row justify-content-md-center">
+    <form asp-action="Cadastro" method="POST" class="col-md-4">
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label asp-for="Login">Login</label>
+            <input asp-for="Login" class="form-control" required/>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Senha">Senha</label>
+            <input asp-for="Senha" class="form-control" required/>
+        </div>
+
+        <input type="submit" value="Alterar" class="btn btn-primary"/>
+    </form>
+</div>
