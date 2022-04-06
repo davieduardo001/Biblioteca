@@ -9,9 +9,12 @@ namespace Biblioteca.Controllers
     
     public class EmprestimoController : Controller
     {
+        //Cadastro
         public IActionResult Cadastro()
         {
-            Autenticacao.CheckLogin(this);
+            if(HttpContext.Session.GetInt32("Id") == null)
+                return Redirect("/Home/Login");           
+
             LivroService livroService = new LivroService();
             EmprestimoService emprestimoService = new EmprestimoService();
 
@@ -36,10 +39,12 @@ namespace Biblioteca.Controllers
             return RedirectToAction("Listagem");
         }
 
+        //Listagem
         public IActionResult Listagem(string tipoFiltro, string filtro)
         {
-            Autenticacao.CheckLogin(this);
-            
+            if(HttpContext.Session.GetInt32("Id") == null)
+                return Redirect("/Home/Login");
+                        
             FiltrosEmprestimos objFiltro = null;
             if(!string.IsNullOrEmpty(filtro))
             {
@@ -51,8 +56,12 @@ namespace Biblioteca.Controllers
             return View(emprestimoService.ListarTodos(objFiltro));
         }
 
+        //Edicao
         public IActionResult Edicao(int id)
         {
+            if(HttpContext.Session.GetInt32("Id") == null)
+                return Redirect("/Home/Login");
+
             LivroService livroService = new LivroService();
             EmprestimoService em = new EmprestimoService();
             Emprestimo e = em.ObterPorId(id);

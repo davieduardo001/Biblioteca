@@ -16,7 +16,17 @@ namespace Biblioteca.Controllers
         //Cadastrar Usuarios
         public IActionResult Cadastro()
         {
-            return View();
+            if(HttpContext.Session.GetInt32("Id") == null)
+                return Redirect("/Home/Login");
+
+            string Login = HttpContext.Session.GetString("Login");
+
+            if (Login == "Admin")
+            {
+                return View();
+            } else {
+                return RedirectToAction("PrivilegiosDeAdm");
+            }
         }
         [HttpPost]
         public IActionResult Cadastro(Usuario u)
@@ -38,10 +48,13 @@ namespace Biblioteca.Controllers
        //Listar Usuarios 
         public IActionResult Listagem()
         {
-            /*
+            if(HttpContext.Session.GetInt32("Id") == null)
+                return Redirect("/Home/Login");
+
+            
             string Login = HttpContext.Session.GetString("Login");
 
-            if (Login == "admin")
+            if (Login == "Admin")
             {
                 UsuarioService us = new UsuarioService();
                 List<Usuario> u = us.Listar();
@@ -49,12 +62,6 @@ namespace Biblioteca.Controllers
             } else {
                 return RedirectToAction("PrivilegiosDeAdm");
             }
-            */
-
-            UsuarioService us = new UsuarioService();
-            List<Usuario> u = us.Listar();
-            return View(u);
-            
         }
 
         public IActionResult PrivilegiosDeAdm()
@@ -65,9 +72,19 @@ namespace Biblioteca.Controllers
         //Editar Usuarios
         public IActionResult Edicao(int idU)
         {
-            UsuarioService us = new UsuarioService();
-            Usuario u = us.EncontrarId(idU);
-            return View(u);
+            if(HttpContext.Session.GetInt32("Id") == null)
+                return Redirect("/Home/Login");
+
+            string Login = HttpContext.Session.GetString("Login");
+
+            if (Login == "Admin")
+            {
+                UsuarioService us = new UsuarioService();
+                Usuario u = us.EncontrarId(idU);
+                return View(u);
+            } else {
+                return RedirectToAction("PrivilegiosDeAdm");
+            }           
         }
         [HttpPost]
         public IActionResult Edicao(Usuario u)
@@ -80,10 +97,20 @@ namespace Biblioteca.Controllers
         //Excluir Usuarios
         public IActionResult Exclusao(Usuario u)
         {
-            Autenticacao.CheckLogin(this);
-            UsuarioService us = new UsuarioService();
-            us.Excluir(u);
-            return View();
+            if(HttpContext.Session.GetInt32("Id") == null)
+                return Redirect("/Home/Login");
+
+            string Login = HttpContext.Session.GetString("Login");
+
+            if (Login == "Admin")
+            {
+                Autenticacao.CheckLogin(this);
+                UsuarioService us = new UsuarioService();
+                us.Excluir(u);
+                return View();
+            } else {
+                return RedirectToAction("PrivilegiosDeAdm");
+            }
         }
     }
 }

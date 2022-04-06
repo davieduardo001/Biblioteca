@@ -1,5 +1,6 @@
 using Biblioteca.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 
 namespace Biblioteca.Controllers
 {
@@ -7,7 +8,9 @@ namespace Biblioteca.Controllers
     {
         public IActionResult Cadastro()
         {
-            Autenticacao.CheckLogin(this);
+            if(HttpContext.Session.GetInt32("Id") == null)
+                return Redirect("/Home/Login");
+
             return View();
         }
 
@@ -30,8 +33,9 @@ namespace Biblioteca.Controllers
 
         public IActionResult Listagem(string tipoFiltro, string filtro, string itensPorPagina, int numDaPagina, int paginaAtual)
         {   
-            Autenticacao.CheckLogin(this);
- 
+            if(HttpContext.Session.GetInt32("Id") == null)
+                return Redirect("/Home/Login");
+
             FiltrosLivros objFiltro = null;
             if(!string.IsNullOrEmpty(filtro))
             {
@@ -50,7 +54,9 @@ namespace Biblioteca.Controllers
 
         public IActionResult Edicao(int id)
         {
-            Autenticacao.CheckLogin(this);
+            if(HttpContext.Session.GetInt32("Id") == null)
+                return Redirect("/Home/Login");
+                
             LivroService ls = new LivroService();
             Livro l = ls.ObterPorId(id);
             return View(l);

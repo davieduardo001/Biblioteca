@@ -124,6 +124,35 @@ namespace Biblioteca.Models
        }
 
        //Autenticacao para login
-       
+        public Usuario FazerLogin(Usuario u)
+        {
+            MySqlConnection connection = new MySqlConnection(_strConection);
+            connection.Open();
+
+            string sql = "SELECT * FROM Usuarios WHERE Login=@Login AND Senha=@Senha";
+
+            MySqlCommand command = new MySqlCommand(sql, connection);
+
+            command.Parameters.AddWithValue("@Login", u.Login);
+            command.Parameters.AddWithValue("@Senha", u.Senha);
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            Usuario usr = null;
+
+            if (reader.Read())
+            {
+                usr = new Usuario();
+                usr.Id = reader.GetInt32("Id");
+
+                if(!reader.IsDBNull(reader.GetOrdinal("Login")))
+                    usr.Login = reader.GetString("Login");
+
+                if(!reader.IsDBNull(reader.GetOrdinal("Senha")))
+                    usr.Senha = reader.GetString("Senha");
+            }
+            connection.Close();
+            return usr;
+        }
     }
 }
