@@ -21,6 +21,8 @@ namespace Biblioteca.Controllers
 
         public IActionResult Index()
         {
+            if(HttpContext.Session.GetInt32("Id") == null)
+                return Redirect("/Home/Login");
             return View();
         }
 
