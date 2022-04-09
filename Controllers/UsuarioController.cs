@@ -35,6 +35,7 @@ namespace Biblioteca.Controllers
 
             if(u.Id == 0)
             {
+                u.Senha = Criptografo.ComputeMD5(u.Senha);
                 usuarioS.Inserir(u);
             }
             else

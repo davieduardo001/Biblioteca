@@ -24,6 +24,7 @@ namespace Biblioteca.Models
             using(BibliotecaContext bc = new BibliotecaContext())
             {
                 Usuario usuario = bc.Usuarios.Find(u.Id);
+
                 u.Login = u.Login;
                 u.Senha = u.Senha;
 
