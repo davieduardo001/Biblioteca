@@ -21,7 +21,7 @@ namespace Biblioteca.Controllers
 
             string Login = HttpContext.Session.GetString("Login");
 
-            if (Login == "Admin")
+            if (Login == "admin")
             {
                 return View();
             } else {
@@ -55,7 +55,7 @@ namespace Biblioteca.Controllers
             
             string Login = HttpContext.Session.GetString("Login");
 
-            if (Login == "Admin")
+            if (Login == "admin")
             {
                 UsuarioService us = new UsuarioService();
                 List<Usuario> u = us.Listar();
@@ -78,10 +78,11 @@ namespace Biblioteca.Controllers
 
             string Login = HttpContext.Session.GetString("Login");
 
-            if (Login == "Admin")
+            if (Login == "admin")
             {
                 UsuarioService us = new UsuarioService();
                 Usuario u = us.EncontrarId(idU);
+
                 return View(u);
             } else {
                 return RedirectToAction("PrivilegiosDeAdm");
@@ -103,12 +104,12 @@ namespace Biblioteca.Controllers
 
             string Login = HttpContext.Session.GetString("Login");
 
-            if (Login == "Admin")
+            if (Login == "admin")
             {
                 Autenticacao.CheckLogin(this);
                 UsuarioService us = new UsuarioService();
                 us.Excluir(u);
-                return View();
+                return RedirectToAction("Listagem", "Usuario");
             } else {
                 return RedirectToAction("PrivilegiosDeAdm");
             }

@@ -21,7 +21,6 @@ namespace Biblioteca.Controllers
 
         public IActionResult Index()
         {
-            Autenticacao.CheckLogin(this);
             return View();
         }
 
@@ -40,17 +39,11 @@ namespace Biblioteca.Controllers
             {
                 HttpContext.Session.SetInt32("Id", usuario.Id);
                 HttpContext.Session.SetString("Login", usuario.Login);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }else{
                 ViewData["Erro"] = "Senha ou usuario inválidos";
                 return View();
             }
-        }
-
-        public IActionResult Logout()
-        {
-            HttpContext.Session.Clear();
-            return View();
         }
         public IActionResult Privacy()
         {

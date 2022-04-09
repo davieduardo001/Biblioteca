@@ -134,8 +134,10 @@ namespace Biblioteca.Models
 
             MySqlCommand command = new MySqlCommand(sql, connection);
 
+            string tempHash = Criptografo.ComputeMD5(u.Senha);
+
             command.Parameters.AddWithValue("@Login", u.Login);
-            command.Parameters.AddWithValue("@Senha", u.Senha);
+            command.Parameters.AddWithValue("@Senha", tempHash);
 
             MySqlDataReader reader = command.ExecuteReader();
 
